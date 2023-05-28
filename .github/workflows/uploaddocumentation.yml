@@ -1,0 +1,14 @@
+name: UploadDocumentation
+on:  [pull_request]
+#on:
+#  push:
+#    branches: [master, main]
+#    tags: ["*"]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Upload doc
+        run: |
+          sudo apt install hugo
